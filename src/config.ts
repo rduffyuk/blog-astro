@@ -3,7 +3,7 @@ export const SITE = {
   author: "Ryan Duffy",
   profile: "https://blog.rduffy.uk/",
   desc: "Technical deep-dives into AI infrastructure, local LLM performance tuning, and automation engineering",
-  title: "Ryan Duffy - AI Infrastructure & Local LLM Journey",
+  title: "Ryan Duffy - Building with AI",
   ogImage: "astropaper-og.jpg",
   lightAndDarkMode: true,
   postPerIndex: 8,
