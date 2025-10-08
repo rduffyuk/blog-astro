@@ -3,35 +3,47 @@ layout: ../layouts/AboutLayout.astro
 title: "About"
 ---
 
-AstroPaper is a minimal, accessible and SEO-friendly blog theme built with [Astro](https://astro.build/) and [Tailwind CSS](https://tailwindcss.com/).
+## Hey there 👋
 
-![Astro Paper](public/astropaper-og.jpg)
+I'm Ryan Duffy, a nerd at heart who loves working with new tech and exploring what can be achieved when humans and AI collaborate.
 
-AstroPaper provides a solid foundation for blogs, or even portfolios\_ with full markdown support, built-in dark mode, and a clean layout that works out-of-the-box.
+By day, I work at BT. By night (and weekends), I build AI infrastructure, experiment with local LLMs, and document the journey.
 
-The blog posts in this theme also serve as guides, docs or example articles\_ making AstroPaper a flexible starting point for your next content-driven site.
+## The ConvoCanvas Story
 
-## Features
+This blog started with a simple problem: context window overflow. September 11, 2025, I hit the limit in a conversation with Claude Code and realized I was drowning in 200+ scattered AI conversations with no way to extract value.
 
-AstroPaper comes with a set of useful features that make content publishing easy and effective:
+25 days later: A self-documenting system with ChromaDB semantic search, 17 local models, K3s infrastructure, and automated architecture diagrams. All built collaboratively with Claude Code.
 
-- SEO-friendly
-- Fast performance
-- Light & dark mode
-- Highly customizable
-- Organizable blog posts
-- Responsive & accessible
-- Static search with [PageFind](https://pagefind.app/)
-- Automatic social image generation
+**Season 1** documents that journey - 8 episodes, 15,550 words, complete with the crashes, the learning, and the honest reality of building in 2025 when AI capabilities evolve weekly.
 
-and so much more.
+## What I'm About
 
-## Show your support
+**Building with AI, not replacing humans with AI.** Claude provides patterns, I provide context and judgment. Together we solve problems neither could handle alone.
 
-If you like [AstroPaper](https://github.com/satnaing/astro-paper), consider giving it a star ⭐️.
+**Learning in public.** The failures, the overkill decisions (looking at you, K3s), the 6,812 pod restarts - it's all documented.
 
-Found a bug 🐛 or have an improvement ✨ in mind? Feel free to open an [issue](https://github.com/satnaing/astro-paper/issues), submit a [pull request](https://github.com/satnaing/astro-paper/pulls) or start a [discussion](https://github.com/satnaing/astro-paper/discussions).
+**Honest iteration over grand promises.** The system works. It's not "done." We iterate based on what makes sense.
 
-If you find this theme helpful, you can also [sponsor me on GitHub](https://github.com/sponsors/satnaing) or [buy me a coffee](https://buymeacoffee.com/satnaing) to show your support — every penny counts.
+## Tech I Use
 
-Kyay zuu! 🙏🏼
+- **AI**: Claude Code, Ollama (17 local models), ChromaDB for semantic search
+- **Infrastructure**: K3s, Docker, Prefect for automation
+- **Code**: Python, FastAPI, TypeScript
+- **Tools**: Obsidian vault (1,142+ files), MCP for AI memory, Astro for this blog
+
+## What's Next?
+
+Season 2? Maybe. If AI capabilities evolve in interesting ways. If there's something worth building.
+
+The only certainty: Human + AI collaboration will keep evolving. And I'll keep documenting it honestly.
+
+## Get in Touch
+
+- **GitHub**: Check the source for this blog or ConvoCanvas components
+- **RSS**: Subscribe to follow along
+- **LinkedIn**: Where I occasionally share the journey
+
+---
+
+*This blog is built with [AstroPaper](https://github.com/satnaing/astro-paper) and deployed on Cloudflare Pages. Season 1 was collaboratively written with Claude Code using the very system it documents.*
