@@ -7,7 +7,11 @@ title: "About"
 
 I'm Ryan Duffy, a nerd at heart who loves working with new tech and exploring what can be achieved when humans and AI collaborate.
 
-By day, I work at BT. By night (and weekends), I build AI infrastructure, experiment with local LLMs, and document the journey.
+## Background
+
+**By day**: JNCIS-SP certified Senior Engineer at BT with 13+ years in telecoms. I work in a fast-paced ISP environment supporting global cloud-based connectivity and complex network platforms. Network engineering fundamentals - BGP, OSPF, multi-technology services - have been my foundation.
+
+**By night (and weekends)**: Building AI infrastructure, experimenting with local LLMs, and applying everything I've learned about automation (Ansible, Python) and reliability engineering to the world of AI systems. Kubernetes, Elasticsearch, Apache Kafka - the tools that power modern infrastructure - now applied to self-documenting AI systems.
 
 ## The ConvoCanvas Story
 
