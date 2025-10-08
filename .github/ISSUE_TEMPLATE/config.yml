@@ -1,5 +1,5 @@
 blank_issues_enabled: false
 contact_links:
-  - name: AstroPaper Discussions
-    url: https://github.com/satnaing/astro-paper/discussions
-    about: Please ask and answer questions here.
+  - name: Get in Touch
+    url: mailto:me@rduffy.uk
+    about: Send me an email for questions or feedback.
