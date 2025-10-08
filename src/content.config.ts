@@ -20,6 +20,12 @@ const blog = defineCollection({
       canonicalURL: z.string().optional(),
       hideEditPost: z.boolean().optional(),
       timezone: z.string().optional(),
+      // Season 1 episode metadata
+      episode: z.number().optional(),
+      series: z.string().optional(),
+      categories: z.array(z.string()).optional(),
+      reading_time: z.string().optional(),
+      word_count: z.number().optional(),
     }),
 });
 
