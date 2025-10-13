@@ -62,6 +62,26 @@ html[data-theme="dark"] {
   @apply underline decoration-wavy decoration-2 underline-offset-4;
 }
 
+/* Mermaid diagram dark mode support */
+html[data-theme="dark"] .mermaid svg {
+  background-color: transparent !important;
+  filter: brightness(0.9) contrast(1.1);
+}
+
+html[data-theme="dark"] .mermaid svg rect,
+html[data-theme="dark"] .mermaid svg path,
+html[data-theme="dark"] .mermaid svg circle,
+html[data-theme="dark"] .mermaid svg polygon {
+  filter: brightness(1.1);
+}
+
+html[data-theme="dark"] .mermaid svg text,
+html[data-theme="dark"] .mermaid svg .nodeLabel,
+html[data-theme="dark"] .mermaid svg .label {
+  fill: #eaedf3 !important;
+  color: #eaedf3 !important;
+}
+
 /* Source: https://piccalil.li/blog/a-more-modern-css-reset/ */
 /* Anything that has been anchored to should have extra scroll margin */
 :target {
