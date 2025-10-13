@@ -638,7 +638,7 @@ graph TB
         V2Cron --> V2Flow --> V2Output
 
         style V2Flow fill:#10b981,stroke:#059669,color:#fff
-        style V2Output fill:#e8f5e9,stroke:#4caf50,color:#fff
+        style V2Output fill:#10b981,stroke:#059669,color:#fff
     end
 
     subgraph Testing["Testing (v3) - Shadow Mode"]
@@ -649,7 +649,7 @@ graph TB
         V3Cron --> V3Flow --> V3Output
 
         style V3Flow fill:#8b5cf6,stroke:#6d28d9,color:#fff
-        style V3Output fill:#fef3c7,stroke:#f59e0b,color:#fff
+        style V3Output fill:#f59e0b,stroke:#d97706,color:#fff
     end
 
     Compare{Daily Comparison<br/>7 days}
