@@ -159,7 +159,6 @@ Storing in ChromaDB...
 - **Difference**: +3,382 documents (new vault content since last index)
 
 ```mermaid
-%%{init: {'theme':'base', 'themeVariables': { 'primaryColor':'#ef4444','secondaryColor':'#10b981','tertiaryColor':'#3b82f6'}}}%%
 flowchart TB
     Start([774 Markdown Files]) --> Check{ChromaDB<br/>Version Check}
     Check -->|v0.4.x DB| Error[❌ 38,348 docs locked<br/>Format incompatible]
@@ -212,7 +211,6 @@ We chose Option B. Here's why.
 Journal v3 is a complete redesign with 8 integrated tasks:
 
 ```mermaid
-%%{init: {'theme':'base', 'themeVariables': { 'primaryColor':'#8b5cf6','secondaryColor':'#10b981','tertiaryColor':'#3b82f6','primaryTextColor':'#fff'}}}%%
 flowchart TD
     Start([Git commits<br/>File changes<br/>Timestamps]) --> Task1[1. detect_work_sessions<br/>97% accuracy<br/>30-min gap + context]
 
@@ -424,7 +422,6 @@ blog_source_dir = blog_dir / "published"       # ← 11 scripts needed this
 **The solution**: Extract all duplicated code into a centralized core module with 5 submodules:
 
 ```mermaid
-%%{init: {'theme':'base', 'themeVariables': { 'primaryColor':'#10b981','secondaryColor':'#3b82f6','tertiaryColor':'#f59e0b'}}}%%
 graph TB
     subgraph Core[" "]
         direction LR
@@ -518,7 +515,6 @@ obsidian-vault/
 **The solution**: Clean architectural separation:
 
 ```mermaid
-%%{init: {'theme':'base', 'themeVariables': { 'primaryColor':'#ef4444','secondaryColor':'#10b981'}}}%%
 graph LR
     subgraph Before["❌ BEFORE: Mixed Architecture"]
         direction TB
@@ -571,7 +567,6 @@ Journal v3's 8-task pipeline required:
 **The timeline** (Oct 12):
 
 ```mermaid
-%%{init: {'theme':'base', 'themeVariables': { 'primaryColor':'#10b981','primaryTextColor':'#fff','primaryBorderColor':'#059669','lineColor':'#6366f1','secondaryColor':'#8b5cf6','tertiaryColor':'#ec4899'}}}%%
 timeline
     title October 12, 2025 - Core Module Refactoring Day
     section Morning: Analysis
@@ -639,7 +634,6 @@ Here's the key insight: **You can't manually test everything when you're shippin
 So instead of trying to predict every edge case, I built a parallel testing framework:
 
 ```mermaid
-%%{init: {'theme':'base', 'themeVariables': { 'primaryColor':'#3b82f6','secondaryColor':'#8b5cf6','tertiaryColor':'#10b981'}}}%%
 graph TB
     subgraph Production["Production (v2) - Zero Risk"]
         V2Cron[Cron: 22:00 daily]

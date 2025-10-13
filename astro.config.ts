@@ -17,8 +17,8 @@ export default defineConfig({
   site: SITE.website,
   integrations: [
     mermaid({
-      theme: "base",
-      autoTheme: false
+      theme: "default",
+      autoTheme: true
     }),
     sitemap({
       filter: page => SITE.showArchives || !page.endsWith("/archives"),
