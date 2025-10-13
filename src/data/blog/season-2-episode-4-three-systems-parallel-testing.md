@@ -159,7 +159,7 @@ Storing in ChromaDB...
 - **Difference**: +3,382 documents (new vault content since last index)
 
 ```mermaid
-%%{init: {'theme':'base', 'themeVariables': { 'primaryTextColor':'#1f2937','secondaryTextColor':'#1f2937','tertiaryTextColor':'#1f2937','primaryBorderColor':'#6b7280','lineColor':'#6b7280','fontFamily':'inherit'}}}%%
+%%{init: {'theme':'base', 'themeVariables': { 'primaryTextColor':'#1f2937','secondaryTextColor':'#1f2937','tertiaryTextColor':'#1f2937','primaryBorderColor':'#6b7280','lineColor':'#6b7280'}}}%%
 flowchart TB
     Start([774 Markdown Files]) --> Check{ChromaDB<br/>Version Check}
     Check -->|v0.4.x DB| Error[❌ 38,348 docs locked<br/>Format incompatible]
@@ -423,7 +423,7 @@ blog_source_dir = blog_dir / "published"       # ← 11 scripts needed this
 **The solution**: Extract all duplicated code into a centralized core module with 5 submodules:
 
 ```mermaid
-%%{init: {'theme':'base', 'themeVariables': { 'primaryTextColor':'#1f2937','secondaryTextColor':'#1f2937','tertiaryTextColor':'#1f2937','primaryBorderColor':'#6b7280','lineColor':'#6b7280','fontFamily':'inherit'}}}%%
+%%{init: {'theme':'base', 'themeVariables': { 'primaryTextColor':'#1f2937','secondaryTextColor':'#1f2937','tertiaryTextColor':'#1f2937','primaryBorderColor':'#6b7280','lineColor':'#6b7280'}}}%%
 graph TB
     subgraph Core[" "]
         direction LR
@@ -517,7 +517,7 @@ obsidian-vault/
 **The solution**: Clean architectural separation:
 
 ```mermaid
-%%{init: {'theme':'base', 'themeVariables': { 'primaryTextColor':'#1f2937','secondaryTextColor':'#1f2937','tertiaryTextColor':'#1f2937','primaryBorderColor':'#6b7280','lineColor':'#6b7280','fontFamily':'inherit'}}}%%
+%%{init: {'theme':'base', 'themeVariables': { 'primaryTextColor':'#1f2937','secondaryTextColor':'#1f2937','tertiaryTextColor':'#1f2937','primaryBorderColor':'#6b7280','lineColor':'#6b7280'}}}%%
 graph LR
     subgraph Before["❌ BEFORE: Mixed Architecture"]
         direction TB
