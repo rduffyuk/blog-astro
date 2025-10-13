@@ -65,14 +65,6 @@ html[data-theme="dark"] {
 /* Mermaid diagram dark mode support */
 html[data-theme="dark"] .mermaid svg {
   background-color: transparent !important;
-  filter: brightness(0.9) contrast(1.1);
-}
-
-html[data-theme="dark"] .mermaid svg rect,
-html[data-theme="dark"] .mermaid svg path,
-html[data-theme="dark"] .mermaid svg circle,
-html[data-theme="dark"] .mermaid svg polygon {
-  filter: brightness(1.1);
 }
 
 html[data-theme="dark"] .mermaid svg text,
