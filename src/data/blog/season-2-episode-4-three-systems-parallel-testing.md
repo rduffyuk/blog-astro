@@ -176,12 +176,12 @@ flowchart TB
     Cache --> Retry[Retry Logic<br/>Exponential backoff]
     Retry --> Complete([✅ 41,730 docs indexed<br/>38 min, <20ms search])
 
-    style Error fill:#fee,stroke:#f44,color:#fff
-    style Complete fill:#efe,stroke:#4a4,color:#fff
-    style Extract fill:#e3f2fd,stroke:#36f,color:#fff
-    style Chunk fill:#e3f2fd,stroke:#36f,color:#fff
-    style Embed fill:#e3f2fd,stroke:#36f,color:#fff
-    style Store fill:#e3f2fd,stroke:#36f,color:#fff
+    style Error fill:#ef4444,stroke:#dc2626,color:#fff
+    style Complete fill:#10b981,stroke:#059669,color:#fff
+    style Extract fill:#3b82f6,stroke:#2563eb,color:#fff
+    style Chunk fill:#3b82f6,stroke:#2563eb,color:#fff
+    style Embed fill:#3b82f6,stroke:#2563eb,color:#fff
+    style Store fill:#3b82f6,stroke:#2563eb,color:#fff
 ```
 
 ---
@@ -458,19 +458,19 @@ graph TB
 
     Unleash[("<b>Unleash Server</b><br/><br/>localhost:4242<br/>Feature flags")] --> Flags
 
-    style Core fill:#e8f5e9,stroke:#4caf50,stroke-width:3px,color:#fff
-    style CoreTitle fill:#e8f5e9,stroke:#4caf50,color:#fff
-    style Config fill:#10b981,stroke:#059669,color:#fff
-    style Clients fill:#10b981,stroke:#059669,color:#fff
-    style Decorators fill:#10b981,stroke:#059669,color:#fff
-    style Flags fill:#10b981,stroke:#059669,color:#fff
-    style Scripts fill:#e3f2fd,stroke:#2196f3,stroke-width:2px,color:#fff
-    style ScriptsTitle fill:#e3f2fd,stroke:#2196f3,color:#fff
-    style Journal fill:#3b82f6,stroke:#2563eb,color:#fff
-    style Blog fill:#3b82f6,stroke:#2563eb,color:#fff
-    style Vault fill:#3b82f6,stroke:#2563eb,color:#fff
-    style Other fill:#3b82f6,stroke:#2563eb,color:#fff
-    style Unleash fill:#fef3c7,stroke:#f59e0b,color:#fff
+    style Core fill:#10b981,stroke:#059669,stroke-width:3px,color:#fff
+    style CoreTitle fill:#10b981,stroke:#059669,color:#fff
+    style Config fill:#059669,stroke:#047857,color:#fff
+    style Clients fill:#059669,stroke:#047857,color:#fff
+    style Decorators fill:#059669,stroke:#047857,color:#fff
+    style Flags fill:#059669,stroke:#047857,color:#fff
+    style Scripts fill:#3b82f6,stroke:#2563eb,stroke-width:2px,color:#fff
+    style ScriptsTitle fill:#3b82f6,stroke:#2563eb,color:#fff
+    style Journal fill:#2563eb,stroke:#1e40af,color:#fff
+    style Blog fill:#2563eb,stroke:#1e40af,color:#fff
+    style Vault fill:#2563eb,stroke:#1e40af,color:#fff
+    style Other fill:#2563eb,stroke:#1e40af,color:#fff
+    style Unleash fill:#f59e0b,stroke:#d97706,color:#fff
 ```
 
 **Impact**:
@@ -522,8 +522,8 @@ graph LR
         V1 --> Content1[01-Journal/<br/>02-Active-Work/<br/>10-Blog/]
         V1 --> Code1[09-System/Scripts/<br/>⚠️ Automation code<br/>pollutes search]
 
-        style V1 fill:#fee,stroke:#f44,color:#fff
-        style Code1 fill:#fef3c7,stroke:#f59e0b,color:#fff
+        style V1 fill:#ef4444,stroke:#dc2626,color:#fff
+        style Code1 fill:#f59e0b,stroke:#d97706,color:#fff
     end
 
     subgraph After["✅ AFTER: Clean Separation"]
@@ -536,10 +536,10 @@ graph LR
         V2 --> Content2[01-Journal/<br/>02-Active-Work/<br/>10-Blog/]
         Scripts --> Journal[journal/ - 11 scripts<br/>blog/ - 9 scripts<br/>vault/ - 4 scripts]
 
-        style V2 fill:#e8f5e9,stroke:#4caf50,color:#fff
-        style Scripts fill:#e3f2fd,stroke:#2196f3,color:#fff
-        style Core fill:#e8f5e9,stroke:#4caf50,color:#fff
-        style Neural fill:#fef3c7,stroke:#f59e0b,color:#fff
+        style V2 fill:#10b981,stroke:#059669,color:#fff
+        style Scripts fill:#3b82f6,stroke:#2563eb,color:#fff
+        style Core fill:#10b981,stroke:#059669,color:#fff
+        style Neural fill:#f59e0b,stroke:#d97706,color:#fff
     end
 
     Before -.->|Refactoring<br/>Oct 12, 17:28| After
