@@ -159,7 +159,6 @@ Storing in ChromaDB...
 - **Difference**: +3,382 documents (new vault content since last index)
 
 ```mermaid
-%%{init: {'theme':'base', 'themeVariables': { 'primaryTextColor':'#1f2937','secondaryTextColor':'#1f2937','tertiaryTextColor':'#1f2937','primaryBorderColor':'#6b7280','lineColor':'#6b7280'}}}%%
 flowchart TB
     Start([774 Markdown Files]) --> Check{ChromaDB<br/>Version Check}
     Check -->|v0.4.x DB| Error[❌ 38,348 docs locked<br/>Format incompatible]
@@ -177,12 +176,12 @@ flowchart TB
     Cache --> Retry[Retry Logic<br/>Exponential backoff]
     Retry --> Complete([✅ 41,730 docs indexed<br/>38 min, <20ms search])
 
-    style Error fill:#fee,stroke:#f44
-    style Complete fill:#efe,stroke:#4a4
-    style Extract fill:#e3f2fd,stroke:#36f
-    style Chunk fill:#e3f2fd,stroke:#36f
-    style Embed fill:#e3f2fd,stroke:#36f
-    style Store fill:#e3f2fd,stroke:#36f
+    style Error fill:#fee,stroke:#f44,color:#fff
+    style Complete fill:#efe,stroke:#4a4,color:#fff
+    style Extract fill:#e3f2fd,stroke:#36f,color:#fff
+    style Chunk fill:#e3f2fd,stroke:#36f,color:#fff
+    style Embed fill:#e3f2fd,stroke:#36f,color:#fff
+    style Store fill:#e3f2fd,stroke:#36f,color:#fff
 ```
 
 ---
@@ -423,7 +422,6 @@ blog_source_dir = blog_dir / "published"       # ← 11 scripts needed this
 **The solution**: Extract all duplicated code into a centralized core module with 5 submodules:
 
 ```mermaid
-%%{init: {'theme':'base', 'themeVariables': { 'primaryTextColor':'#1f2937','secondaryTextColor':'#1f2937','tertiaryTextColor':'#1f2937','primaryBorderColor':'#6b7280','lineColor':'#6b7280'}}}%%
 graph TB
     subgraph Core[" "]
         direction LR
@@ -460,19 +458,19 @@ graph TB
 
     Unleash[("<b>Unleash Server</b><br/><br/>localhost:4242<br/>Feature flags")] --> Flags
 
-    style Core fill:#e8f5e9,stroke:#4caf50,stroke-width:3px
-    style CoreTitle fill:#e8f5e9,stroke:#4caf50,color:#000
+    style Core fill:#e8f5e9,stroke:#4caf50,stroke-width:3px,color:#fff
+    style CoreTitle fill:#e8f5e9,stroke:#4caf50,color:#fff
     style Config fill:#10b981,stroke:#059669,color:#fff
     style Clients fill:#10b981,stroke:#059669,color:#fff
     style Decorators fill:#10b981,stroke:#059669,color:#fff
     style Flags fill:#10b981,stroke:#059669,color:#fff
-    style Scripts fill:#e3f2fd,stroke:#2196f3,stroke-width:2px
-    style ScriptsTitle fill:#e3f2fd,stroke:#2196f3,color:#000
+    style Scripts fill:#e3f2fd,stroke:#2196f3,stroke-width:2px,color:#fff
+    style ScriptsTitle fill:#e3f2fd,stroke:#2196f3,color:#fff
     style Journal fill:#3b82f6,stroke:#2563eb,color:#fff
     style Blog fill:#3b82f6,stroke:#2563eb,color:#fff
     style Vault fill:#3b82f6,stroke:#2563eb,color:#fff
     style Other fill:#3b82f6,stroke:#2563eb,color:#fff
-    style Unleash fill:#fef3c7,stroke:#f59e0b
+    style Unleash fill:#fef3c7,stroke:#f59e0b,color:#fff
 ```
 
 **Impact**:
@@ -517,7 +515,6 @@ obsidian-vault/
 **The solution**: Clean architectural separation:
 
 ```mermaid
-%%{init: {'theme':'base', 'themeVariables': { 'primaryTextColor':'#1f2937','secondaryTextColor':'#1f2937','tertiaryTextColor':'#1f2937','primaryBorderColor':'#6b7280','lineColor':'#6b7280'}}}%%
 graph LR
     subgraph Before["❌ BEFORE: Mixed Architecture"]
         direction TB
@@ -525,8 +522,8 @@ graph LR
         V1 --> Content1[01-Journal/<br/>02-Active-Work/<br/>10-Blog/]
         V1 --> Code1[09-System/Scripts/<br/>⚠️ Automation code<br/>pollutes search]
 
-        style V1 fill:#fee,stroke:#f44
-        style Code1 fill:#fef3c7,stroke:#f59e0b
+        style V1 fill:#fee,stroke:#f44,color:#fff
+        style Code1 fill:#fef3c7,stroke:#f59e0b,color:#fff
     end
 
     subgraph After["✅ AFTER: Clean Separation"]
@@ -539,10 +536,10 @@ graph LR
         V2 --> Content2[01-Journal/<br/>02-Active-Work/<br/>10-Blog/]
         Scripts --> Journal[journal/ - 11 scripts<br/>blog/ - 9 scripts<br/>vault/ - 4 scripts]
 
-        style V2 fill:#e8f5e9,stroke:#4caf50
-        style Scripts fill:#e3f2fd,stroke:#2196f3
-        style Core fill:#e8f5e9,stroke:#4caf50
-        style Neural fill:#fef3c7,stroke:#f59e0b
+        style V2 fill:#e8f5e9,stroke:#4caf50,color:#fff
+        style Scripts fill:#e3f2fd,stroke:#2196f3,color:#fff
+        style Core fill:#e8f5e9,stroke:#4caf50,color:#fff
+        style Neural fill:#fef3c7,stroke:#f59e0b,color:#fff
     end
 
     Before -.->|Refactoring<br/>Oct 12, 17:28| After
@@ -645,8 +642,8 @@ graph TB
 
         V2Cron --> V2Flow --> V2Output
 
-        style V2Flow fill:#10b981,stroke:#059669
-        style V2Output fill:#e8f5e9,stroke:#4caf50
+        style V2Flow fill:#10b981,stroke:#059669,color:#fff
+        style V2Output fill:#e8f5e9,stroke:#4caf50,color:#fff
     end
 
     subgraph Testing["Testing (v3) - Shadow Mode"]
@@ -656,8 +653,8 @@ graph TB
 
         V3Cron --> V3Flow --> V3Output
 
-        style V3Flow fill:#8b5cf6,stroke:#6d28d9
-        style V3Output fill:#fef3c7,stroke:#f59e0b
+        style V3Flow fill:#8b5cf6,stroke:#6d28d9,color:#fff
+        style V3Output fill:#fef3c7,stroke:#f59e0b,color:#fff
     end
 
     Compare{Daily Comparison<br/>7 days}
@@ -677,10 +674,10 @@ graph TB
 
     Unleash[(Unleash<br/>Feature Flags)] -.->|Toggle modules| V3Flow
 
-    style Compare fill:#3b82f6,stroke:#2563eb
-    style Decision fill:#f59e0b,stroke:#d97706
-    style Promote fill:#10b981,stroke:#059669
-    style Iterate fill:#ef4444,stroke:#dc2626
+    style Compare fill:#3b82f6,stroke:#2563eb,color:#fff
+    style Decision fill:#f59e0b,stroke:#d97706,color:#fff
+    style Promote fill:#10b981,stroke:#059669,color:#fff
+    style Iterate fill:#ef4444,stroke:#dc2626,color:#fff
 ```
 
 ### Architecture for Graceful Degradation
