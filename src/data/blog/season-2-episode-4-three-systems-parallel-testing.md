@@ -525,8 +525,8 @@ graph LR
         V1 --> Content1[01-Journal/<br/>02-Active-Work/<br/>10-Blog/]
         V1 --> Code1[09-System/Scripts/<br/>⚠️ Automation code<br/>pollutes search]
 
-        style V1 fill:#fee,stroke:#f44,color:#1f2937
-        style Code1 fill:#fef3c7,stroke:#f59e0b,color:#1f2937
+        style V1 fill:#fee,stroke:#f44
+        style Code1 fill:#fef3c7,stroke:#f59e0b
     end
 
     subgraph After["✅ AFTER: Clean Separation"]
@@ -539,10 +539,10 @@ graph LR
         V2 --> Content2[01-Journal/<br/>02-Active-Work/<br/>10-Blog/]
         Scripts --> Journal[journal/ - 11 scripts<br/>blog/ - 9 scripts<br/>vault/ - 4 scripts]
 
-        style V2 fill:#e8f5e9,stroke:#4caf50,color:#1f2937
-        style Scripts fill:#e3f2fd,stroke:#2196f3,color:#1f2937
-        style Core fill:#e8f5e9,stroke:#4caf50,color:#1f2937
-        style Neural fill:#fef3c7,stroke:#f59e0b,color:#1f2937
+        style V2 fill:#e8f5e9,stroke:#4caf50
+        style Scripts fill:#e3f2fd,stroke:#2196f3
+        style Core fill:#e8f5e9,stroke:#4caf50
+        style Neural fill:#fef3c7,stroke:#f59e0b
     end
 
     Before -.->|Refactoring<br/>Oct 12, 17:28| After
@@ -645,7 +645,7 @@ graph TB
 
         V2Cron --> V2Flow --> V2Output
 
-        style V2Flow fill:#10b981,stroke:#059669,color:#fff
+        style V2Flow fill:#10b981,stroke:#059669
         style V2Output fill:#e8f5e9,stroke:#4caf50
     end
 
@@ -656,7 +656,7 @@ graph TB
 
         V3Cron --> V3Flow --> V3Output
 
-        style V3Flow fill:#8b5cf6,stroke:#6d28d9,color:#fff
+        style V3Flow fill:#8b5cf6,stroke:#6d28d9
         style V3Output fill:#fef3c7,stroke:#f59e0b
     end
 
@@ -677,10 +677,10 @@ graph TB
 
     Unleash[(Unleash<br/>Feature Flags)] -.->|Toggle modules| V3Flow
 
-    style Compare fill:#3b82f6,stroke:#2563eb,color:#fff
-    style Decision fill:#f59e0b,stroke:#d97706,color:#fff
-    style Promote fill:#10b981,stroke:#059669,color:#fff
-    style Iterate fill:#ef4444,stroke:#dc2626,color:#fff
+    style Compare fill:#3b82f6,stroke:#2563eb
+    style Decision fill:#f59e0b,stroke:#d97706
+    style Promote fill:#10b981,stroke:#059669
+    style Iterate fill:#ef4444,stroke:#dc2626
 ```
 
 ### Architecture for Graceful Degradation
