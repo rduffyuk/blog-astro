@@ -159,6 +159,7 @@ Storing in ChromaDB...
 - **Difference**: +3,382 documents (new vault content since last index)
 
 ```mermaid
+%%{init: {'theme':'base', 'themeVariables': { 'primaryTextColor':'#1f2937','secondaryTextColor':'#1f2937','tertiaryTextColor':'#1f2937','primaryBorderColor':'#6b7280','lineColor':'#6b7280','fontFamily':'inherit'}}}%%
 flowchart TB
     Start([774 Markdown Files]) --> Check{ChromaDB<br/>Version Check}
     Check -->|v0.4.x DB| Error[❌ 38,348 docs locked<br/>Format incompatible]
@@ -422,6 +423,7 @@ blog_source_dir = blog_dir / "published"       # ← 11 scripts needed this
 **The solution**: Extract all duplicated code into a centralized core module with 5 submodules:
 
 ```mermaid
+%%{init: {'theme':'base', 'themeVariables': { 'primaryTextColor':'#1f2937','secondaryTextColor':'#1f2937','tertiaryTextColor':'#1f2937','primaryBorderColor':'#6b7280','lineColor':'#6b7280','fontFamily':'inherit'}}}%%
 graph TB
     subgraph Core[" "]
         direction LR
@@ -515,6 +517,7 @@ obsidian-vault/
 **The solution**: Clean architectural separation:
 
 ```mermaid
+%%{init: {'theme':'base', 'themeVariables': { 'primaryTextColor':'#1f2937','secondaryTextColor':'#1f2937','tertiaryTextColor':'#1f2937','primaryBorderColor':'#6b7280','lineColor':'#6b7280','fontFamily':'inherit'}}}%%
 graph LR
     subgraph Before["❌ BEFORE: Mixed Architecture"]
         direction TB
@@ -522,8 +525,8 @@ graph LR
         V1 --> Content1[01-Journal/<br/>02-Active-Work/<br/>10-Blog/]
         V1 --> Code1[09-System/Scripts/<br/>⚠️ Automation code<br/>pollutes search]
 
-        style V1 fill:#fee,stroke:#f44
-        style Code1 fill:#fef3c7,stroke:#f59e0b
+        style V1 fill:#fee,stroke:#f44,color:#1f2937
+        style Code1 fill:#fef3c7,stroke:#f59e0b,color:#1f2937
     end
 
     subgraph After["✅ AFTER: Clean Separation"]
@@ -536,10 +539,10 @@ graph LR
         V2 --> Content2[01-Journal/<br/>02-Active-Work/<br/>10-Blog/]
         Scripts --> Journal[journal/ - 11 scripts<br/>blog/ - 9 scripts<br/>vault/ - 4 scripts]
 
-        style V2 fill:#e8f5e9,stroke:#4caf50
-        style Scripts fill:#e3f2fd,stroke:#2196f3
-        style Core fill:#e8f5e9,stroke:#4caf50
-        style Neural fill:#fef3c7,stroke:#f59e0b
+        style V2 fill:#e8f5e9,stroke:#4caf50,color:#1f2937
+        style Scripts fill:#e3f2fd,stroke:#2196f3,color:#1f2937
+        style Core fill:#e8f5e9,stroke:#4caf50,color:#1f2937
+        style Neural fill:#fef3c7,stroke:#f59e0b,color:#1f2937
     end
 
     Before -.->|Refactoring<br/>Oct 12, 17:28| After
