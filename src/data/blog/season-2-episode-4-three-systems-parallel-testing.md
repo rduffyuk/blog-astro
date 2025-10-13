@@ -566,19 +566,28 @@ Journal v3's 8-task pipeline required:
 
 **The timeline** (Oct 12):
 
-```mermaid
-timeline
-    title October 12 2025 Core Module Refactoring Day
-    section Morning
-        1512 : Analysis Report
-    section Afternoon
-        1607 : Design Plan
-        1653 : Unleash Deployed
-        1721 : Migration Plan
-        1728 : Migration Complete
-        1740 : Core Module Complete
-    section Evening
-        1926 : Journal v3 Complete
+```
+┌─────────────────────────────────────────────────────────┐
+│  MORNING (09:00-12:00)                                  │
+│  15:12  Analysis Report                                 │
+│         30+ scripts analyzed, 3,500 lines duplication   │
+├─────────────────────────────────────────────────────────┤
+│  AFTERNOON (12:00-18:00)                                │
+│  16:07  Design Plan                                     │
+│         18 paths discovered, ULTRATHINK analysis        │
+│  16:53  Unleash Deployed                                │
+│         Feature flags ready, Infrastructure live        │
+│  17:21  Migration Plan                                  │
+│         Vault cleanup design                            │
+│  17:28  Migration Complete                              │
+│         38 scripts moved, Clean architecture            │
+│  17:40  Core Module Complete                            │
+│         config.py, clients.py, decorators.py (1,300)    │
+├─────────────────────────────────────────────────────────┤
+│  EVENING (18:00-24:00)                                  │
+│  19:26  Journal v3 Complete                             │
+│         Built on core module, 5,400+ lines integrated   │
+└─────────────────────────────────────────────────────────┘
 ```
 
 **Timeline breakdown**:
