@@ -1,17 +1,9 @@
 ---
 author: Ryan Duffy
+pubDatetime: 2025-10-18
+title: 'From Interview to Implementation: Perfect 100/100 Anthropic Alignment'
 featured: false
-categories:
-- Season 2
-- Architecture
-- Automation
-date: 2025-10-18
-draft: true
-episode: 5
-season: 2
-reading_time: 35 minutes
-series: 'Season 2: Building in Public'
-summary: BT SRE interview on Oct 17th morning (strong networking/Linux, exposed K8s gaps), followed by 5.5 hours implementing Anthropic patterns that afternoon/evening. Achieved PERFECT 100/100 alignment (66→94→100) via Phase 1 quick wins (+28), Phase 2 bash tools (+3), Phase 3 subagent pattern (+2), Phase 4 resumable execution (+1). Parallel work: Skills migration Day 5-7 complete (4 pilot skills, 103 tests passing, 99.4% token reduction 32K→240). Neural vault multi-agent router with BM25 hybrid search. Token-optimized MCP architecture (17→15 tools, 6K tokens/session saved). 38,380 documents indexed. Building production AI systems while employed full-time at BT.
+draft: false
 tags:
 - anthropic-patterns
 - multi-agent
@@ -26,11 +18,10 @@ tags:
 - quality-gates
 - parallel-execution
 - bt-sre-interview
-- real-world-timing
-- temporal-search
-- reciprocal-rank-fusion
-title: 'From Interview to Implementation: Perfect 100/100 Anthropic Alignment'
-word_count: 9200
+- ai-assisted-execution
+- manual-rebuild
+description: BT SRE interview Oct 17th morning (strong networking/Linux, exposed K8s gaps), followed by 5.5 hours implementing Anthropic patterns after work. Achieved PERFECT 100/100 alignment (66→94→100) via parallel execution, enhanced MCP docs, LLM-as-judge, bash tools, subagent pattern, resumable execution. Skills migration Day 5-7 complete (103 tests, 99.4% token reduction). The honest gap - AI-assisted execution masked foundational knowledge. Claude Code rebuilt K3s cluster, but I couldn't explain control plane in interview. Manual rebuild plan to close the gap.
+reading_time: 42 min
 ---
 
 # Episode 5: From Interview to Implementation - Perfect 100/100 Anthropic Alignment
