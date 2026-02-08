@@ -1,9 +1,13 @@
 import { defineConfig, envField } from "astro/config";
 import tailwindcss from "@tailwindcss/vite";
 import sitemap from "@astrojs/sitemap";
+import mdx from "@astrojs/mdx";
+import react from "@astrojs/react";
 import remarkToc from "remark-toc";
 import remarkCollapse from "remark-collapse";
 import mermaid from "astro-mermaid";
+import rehypeExternalLinks from "rehype-external-links";
+import { remarkReadingTime } from "./src/utils/remarkReadingTime";
 import {
   transformerNotationDiff,
   transformerNotationHighlight,
@@ -18,16 +22,28 @@ export default defineConfig({
   integrations: [
     mermaid({
       theme: "default",
-      autoTheme: true
+      autoTheme: true,
     }),
     sitemap({
       filter: page => SITE.showArchives || !page.endsWith("/archives"),
     }),
+    mdx(),
+    react(),
   ],
   markdown: {
     remarkPlugins: [
       remarkToc,
       [remarkCollapse, { test: "Table of contents" }],
+      remarkReadingTime,
+    ],
+    rehypePlugins: [
+      [
+        rehypeExternalLinks,
+        {
+          target: "_blank",
+          rel: ["nofollow", "noopener", "noreferrer"],
+        },
+      ],
     ],
     shikiConfig: {
       // For more themes, visit https://shiki.style/themes
