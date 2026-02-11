@@ -9,7 +9,7 @@ pubDatetime: 2026-02-11
 draft: false
 episode: 2
 series: 'Season 3: Building in Public (Oct 2025 — Feb 2026)'
-description: "The automated journal entries were fiction. Every single one. Here's how a broken pipeline got replaced in 10 days — Kafka, vLLM workers, nine prompt rewrites, a context preservation fix, and an LLM-as-Judge quality gate — all tracked through git commits and vault evidence."
+description: "The automated journal entries were fiction. Every single one. Here's how a broken pipeline got replaced in 10 days — Kafka, vLLM workers, nine code iterations, a context preservation fix, and an LLM-as-Judge quality gate — all tracked through git commits and vault evidence."
 tags:
 - kafka
 - vllm
@@ -266,17 +266,17 @@ triggers:
 
 Max replica count: 1. We never want parallel aggregation jobs competing to write the same daily journal. Scaling strategy: "accurate" — KEDA only creates a job when triggers actually fire.
 
-## 🎭 February 2-7: Nine Prompt Versions in Six Days
+## 🎭 February 2-7: Nine Code Iterations in Six Days
 
-![Nine prompt versions — iteration and frustration](../../assets/images/s3e2/05-nine-prompt-versions.webp)
+![Nine code iterations — deployed and tested](../../assets/images/s3e2/05-nine-prompt-versions.webp)
 
 The pipeline worked immediately. The *quality* didn't.
 
-*Git evidence: GitOps commits `e5aabcd` through `7615110` — six synthesizer deployment updates in six days, each bumping the prompt version.*
+*Git evidence: GitOps commits `e5aabcd` through `7615110` — six synthesizer deployment updates in six days, each deploying a new synthesizer version.*
 
 The first journal entries from the streaming pipeline read like a LinkedIn influencer had possessed my writing voice. All the right buzzwords, none of the personality. "Leveraged cutting-edge infrastructure to deliver scalable solutions." I don't talk like that. Nobody talks like that.
 
-So began the prompt iteration sprint:
+So began the code iteration sprint:
 
 - **v4** (Feb 1): Voice-refined prompts. Better, but still corporate.
 - **v5** (Feb 1): Added human-AI collaboration attribution. "Claude and I" not "I used Claude."
@@ -427,7 +427,7 @@ I promised in Episode 1 that this system still has bugs. Here they are.
 | **vLLM worker replicas** | 3 |
 | **Token routing threshold** | 44,724 |
 | **Context preserved** | 85% (up from 15%) |
-| **Prompt versions** | 9 (v1 → v9 in 8 days) |
+| **Code iterations** | 9 (v1 → v9 in 8 days) |
 | **Streaming files produced** | 621 (10 days) |
 | **OTEL richness score** | 2/10 |
 | **JSONL richness score** | 9/10 |
@@ -453,7 +453,7 @@ I promised in Episode 1 that this system still has bugs. Here they are.
 
 **1. Input quality beats model quality**
 
-We tried improving the model (DeepSeek R1 → Qwen3-14B), improving the prompt (v1 through v9), and improving the architecture (E2A pipeline). The single most impactful change was switching from OTEL events (2/10 richness) to JSONL transcripts (9/10 richness). Everything else was refinement. Fix the input first.
+We tried improving the model (DeepSeek R1 → Qwen3-14B), improving the synthesizer code (v1 through v9), and improving the architecture (E2A pipeline). The single most impactful change was switching from OTEL events (2/10 richness) to JSONL transcripts (9/10 richness). Everything else was refinement. Fix the input first.
 
 **2. Read your own output**
 
@@ -465,7 +465,7 @@ The 44K routing threshold, the 35K context preservation budget, the 2,048 token 
 
 **4. Ship messy, fix fast**
 
-Nine prompt versions in eight days. Context preservation fix on day six. Model swap on day seven. None planned — all reactive. But the speed of iteration only happened because the infrastructure was already deployed. You can't iterate on something that doesn't exist.
+Nine code iterations in eight days. Context preservation fix on day six. Model swap on day seven. None planned — all reactive. But the speed of iteration only happened because the infrastructure was already deployed. You can't iterate on something that doesn't exist.
 
 ## 🔮 What's Next
 
@@ -473,7 +473,7 @@ The E2A pipeline needs to go from "coded" to "deployed in the Kafka flow." The d
 
 The endgame: Claude Code session → automated journal entry → weekly blog post → LinkedIn summary. Fully automated content from terminal to social media, with quality gates at every stage.
 
-But the journals weren't the only thing breaking that week. While I was iterating prompt versions, someone from outside walked through a door I'd left open. That's Episode 3.
+But the journals weren't the only thing breaking that week. While I was iterating code deployments, someone from outside walked through a door I'd left open. That's Episode 3.
 
 ---
 
