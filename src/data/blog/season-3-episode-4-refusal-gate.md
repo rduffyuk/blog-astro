@@ -85,7 +85,7 @@ This was the platform on the day the refusal gate landed. Matrix was the brand-n
                             │
 ┌─────────────────────────────────────────────────────────────┐
 │  L5 DATA                                                    │
-│  Qdrant 148K docs · BM25 hybrid · FalkorDB ← NEW (209 nodes)│
+│  Qdrant ~4K docs (148K chunks) · BM25 · FalkorDB ← NEW (209)│
 │  (no Jira connector yet — that's E5)                        │
 └─────────────────────────────────────────────────────────────┘
                             │
@@ -192,7 +192,7 @@ Two findings, both decisive.
 
 **Latency in the production environment, not the dev laptop.** ColBERT looked fine on the MacBook M4 Pro — 258ms per query on 8 passages, with the Apple Neural Engine doing the work behind ONNX Runtime. In the K3s pod (1 CPU core, no Neural Engine, no embedding cache), ColBERT was 33,144ms per query. **128× slower than the laptop.** Not a tuning issue — the late-interaction pattern recomputes all passage embeddings per call because there's no precomputed index in a reranking context. On Apple Silicon the Neural Engine absorbs that cost invisibly. In a constrained CPU pod every token-level embedding hits the wall.
 
-**Score distribution that the gate can use.** FlashRank scores spread from 0.29 to 0.96 across the test set — a range the refusal gate can work with. ColBERT scores cluster at 0.95 to 0.97 for everything. Top result and bottom result separated by 0.02. ColBERT cannot distinguish relevant from irrelevant *at all* because token-level MaxSim produces high similarity for any vaguely-related text, and in a 148,000-document vault, everything is vaguely related to everything else.
+**Score distribution that the gate can use.** FlashRank scores spread from 0.29 to 0.96 across the test set — a range the refusal gate can work with. ColBERT scores cluster at 0.95 to 0.97 for everything. Top result and bottom result separated by 0.02. ColBERT cannot distinguish relevant from irrelevant *at all* because token-level MaxSim produces high similarity for any vaguely-related text, and in a vault of nearly 4,000 documents indexed as 148,000+ chunks, everything is vaguely related to everything else.
 
 A reranker that scores everything 0.95+ is useless for a threshold-based refusal gate. It would either refuse nothing (threshold 0.94) or refuse everything (threshold 0.96).
 
