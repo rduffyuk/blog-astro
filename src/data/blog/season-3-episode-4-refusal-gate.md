@@ -11,7 +11,7 @@ description: How a single score threshold became the difference between a bot th
 draft: false
 episode: 4
 featured: false
-pubDatetime: 2026-05-17 09:00:00+00:00
+pubDatetime: 2026-05-10 19:30:00+00:00
 reading_time: 20 minutes
 series: 'Season 3: Building in Public (Oct 2025 — Feb 2026)'
 slug: season-3-episode-4-refusal-gate
