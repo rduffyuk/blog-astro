@@ -10,7 +10,7 @@ description: How a single score threshold became the difference between a bot th
   queue.
 draft: false
 episode: 4
-featured: false
+featured: true
 pubDatetime: 2026-05-10 12:00:00+00:00
 reading_time: 20 minutes
 series: 'Season 3: Building in Public (Oct 2025 — Feb 2026)'

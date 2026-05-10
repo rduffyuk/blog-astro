@@ -5,7 +5,7 @@ categories:
 - Season 3
 - Journal Automation
 - Streaming
-pubDatetime: 2026-02-11
+pubDatetime: 2026-02-11 09:00:00+00:00
 draft: false
 episode: 2
 series: 'Season 3: Building in Public (Oct 2025 — Feb 2026)'
