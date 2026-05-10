@@ -5,7 +5,7 @@ categories:
 - Season 1
 - Knowledge Management
 - Automation
-pubDatetime: 2025-10-05
+pubDatetime: 2025-10-05 12:00:00+00:00
 draft: false
 episode: 4
 reading_time: 9 minutes

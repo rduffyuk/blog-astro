@@ -5,7 +5,7 @@ categories:
 - Season 1
 - ConvoCanvas
 - Planning
-pubDatetime: 2025-10-05
+pubDatetime: 2025-10-05 09:00:00+00:00
 draft: false
 episode: 1
 reading_time: 7 minutes

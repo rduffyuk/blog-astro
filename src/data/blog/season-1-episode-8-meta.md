@@ -5,7 +5,7 @@ categories:
 - Season 1
 - Meta
 - AI
-pubDatetime: 2025-10-05
+pubDatetime: 2025-10-05 16:00:00+00:00
 draft: false
 episode: 8
 reading_time: 5 minutes

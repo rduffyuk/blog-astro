@@ -5,7 +5,7 @@ categories:
 - Season 1
 - Infrastructure
 - Debugging
-pubDatetime: 2025-10-05
+pubDatetime: 2025-10-05 14:00:00+00:00
 draft: false
 episode: 6
 reading_time: 9 minutes

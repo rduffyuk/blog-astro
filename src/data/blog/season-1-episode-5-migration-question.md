@@ -5,7 +5,7 @@ categories:
 - Season 1
 - Infrastructure
 - DevOps
-pubDatetime: 2025-10-05
+pubDatetime: 2025-10-05 13:00:00+00:00
 draft: false
 episode: 5
 reading_time: 10 minutes

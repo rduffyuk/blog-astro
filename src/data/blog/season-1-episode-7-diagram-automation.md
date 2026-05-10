@@ -5,7 +5,7 @@ categories:
 - Season 1
 - Documentation
 - Automation
-pubDatetime: 2025-10-05
+pubDatetime: 2025-10-05 15:00:00+00:00
 draft: false
 episode: 7
 reading_time: 8 minutes
