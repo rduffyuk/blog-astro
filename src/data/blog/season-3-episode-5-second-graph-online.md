@@ -65,7 +65,7 @@ If you only read one section of what follows, read the one on the NER reversal. 
 
 ## Where the system stood (March 2026)
 
-This was the platform at the start of the episode. The L4 inference layer was still serving Qwen3-14B-AWQ (Qwen3-8B-AWQ doesn't land until May — that's a later episode about smoke gates and thinking-mode leaks). The journal streaming pipeline from S3E2 was running. The Matrix bot from S3E4 was producing real answers. The vault was at 148K documents in Qdrant.
+This was the platform at the start of the episode. The L4 inference layer was still serving Qwen3-14B-AWQ (Qwen3-8B-AWQ doesn't land until May — that's a later episode about smoke gates and thinking-mode leaks). The journal streaming pipeline from S3E2 was running. The Matrix bot from S3E4 was producing real answers. The vault sat at around 4K documents in Qdrant (148K chunks after embedding).
 
 ```
 ┌─────────────────────────────────────────────────────────────┐
@@ -92,8 +92,8 @@ This was the platform at the start of the episode. The L4 inference layer was st
 ┌─────────────────────────────────────────────────────────────┐
 │  L5 DATA  ← THIS POST                                       │
 │                                                             │
-│   Qdrant 148K docs · BM25 hybrid (server-side RRF comes     │
-│                                   in a later episode)       │
+│   Qdrant ~4K docs (148K chunks) · BM25 hybrid               │
+│   (server-side RRF comes in a later episode)                │
 │                                                             │
 │   FalkorDB:                                                 │
 │     document_knowledge      ← was there before (S3E4)       │
