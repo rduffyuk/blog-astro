@@ -29,22 +29,48 @@ const {
 } = Astro.props;
 
 const socialImageURL = new URL(ogImage, Astro.url);
+const canonicalHref =
+  canonicalURL instanceof URL ? canonicalURL.toString() : String(canonicalURL);
 
-const structuredData = {
-  "@context": "https://schema.org",
-  "@type": "BlogPosting",
-  headline: `${title}`,
-  image: `${socialImageURL}`,
-  datePublished: `${pubDatetime?.toISOString()}`,
-  ...(modDatetime && { dateModified: modDatetime.toISOString() }),
-  author: [
-    {
-      "@type": "Person",
-      name: `${author}`,
-      ...(profile && { url: profile }),
-    },
-  ],
-};
+// Schema.org: BlogPosting for actual post pages (pubDatetime present),
+// WebSite for homepage / about / tag pages. Avoids the prior bug where
+// `${pubDatetime?.toISOString()}` interpolated the literal string
+// "undefined" into datePublished on non-post pages, breaking rich results
+// and AI Mode citation eligibility.
+const structuredData = pubDatetime
+  ? {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      headline: title,
+      description,
+      image: socialImageURL.toString(),
+      url: canonicalHref,
+      mainEntityOfPage: {
+        "@type": "WebPage",
+        "@id": canonicalHref,
+      },
+      datePublished: pubDatetime.toISOString(),
+      ...(modDatetime && { dateModified: modDatetime.toISOString() }),
+      author: [
+        {
+          "@type": "Person",
+          name: author,
+          ...(profile && { url: profile }),
+        },
+      ],
+    }
+  : {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      name: SITE.title,
+      url: new URL("/", Astro.url).toString(),
+      description: SITE.desc,
+      author: {
+        "@type": "Person",
+        name: SITE.author,
+        ...(SITE.profile && { url: SITE.profile }),
+      },
+    };
 ---
 
 <!doctype html>
