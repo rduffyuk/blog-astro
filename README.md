@@ -1,3 +1,15 @@
+# Ryan Duffy's Blog — Source
+
+**Live site**: [rduffy.uk](https://rduffy.uk) / [blog.rduffy.uk](https://blog.rduffy.uk)
+
+This is the Astro source for my personal blog where I document **Building in Public** with Rootweaver — a personal AI infrastructure platform on K3s. Topics include RAG architecture, MCP, autonomous SRE agents, vLLM, multi-agent orchestration, and the patterns that emerge when a single engineer builds end-to-end with AI as collaborator.
+
+**Subscribe**: [RSS feed](https://blog.rduffy.uk/rss.xml)
+
+Built on the excellent [AstroPaper](https://astro-paper.pages.dev/) theme by [@satnaing](https://github.com/satnaing) — original theme documentation below.
+
+---
+
 # AstroPaper 📄
 
 ![AstroPaper](public/astropaper-og.jpg)
