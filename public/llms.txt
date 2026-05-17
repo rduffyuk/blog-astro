@@ -1,0 +1,43 @@
+# Ryan Duffy - Building with AI
+
+> Solo SRE building a personal AI infrastructure platform on K3s. Public homelab journey documenting RAG architecture, multi-agent orchestration, MCP bridges, autonomous SRE agents, and the patterns that emerge when you treat your own life and work as a platform.
+
+## About the author
+
+Ryan Duffy is an SRE specialist at BT Group (UK), building Rootweaver in evenings and weekends since late 2024. Rootweaver is a personal AI infrastructure platform combining production RAG, autonomous SRE triage, MCP-as-primary surface, and cross-device unified compute on K3s with prosumer hardware (RTX 4080). The blog documents architectural decisions, lessons from production homelab use, and the broader pattern of single-engineer end-to-end platform building enabled by AI orchestration.
+
+## Series
+
+- [Season 3: Platform Engineering in Public](https://blog.rduffy.uk/posts/from-side-project-to-platform-how-running-out-of-disk-space-led-to-rebranding-an-entire-platform/) — Rebranding from ConvoCanvas to Rootweaver, the disk-space crisis that triggered the platform rewrite, autonomous SRE agent design, streaming journals with Kafka + KEDA + vLLM, dual knowledge graphs (documents + code), and the production-grade hardening that came with it. Oct 2025 onwards.
+- [Season 2: Validation Chronicles](https://blog.rduffy.uk/posts/season-2-episode-1-validation-chronicles/) — Multi-agent RAG implementation, parallel execution patterns, quality gates, Anthropic 100/100 alignment, LLM-as-judge verification. Spring–autumn 2025.
+- [Season 1: ConvoCanvas Origin](https://blog.rduffy.uk/posts/season-1-episode-1-day-zero/) — Day Zero through Episode 8. The founding journey: realising AI could be the orchestration partner, building the first MVP, the AI Awakening moment, K3s crash and recovery, diagram automation, meta-reflection. Sept–Oct 2025.
+
+## Recent posts
+
+- [The Second Graph Comes Online: Activation, Communities, and an AI Reversal](https://blog.rduffy.uk/posts/the-second-graph-comes-online-activation-communities-and-an-ai-reversal/) — S3E5. Code as queryable graph (FalkorDB + PDG), spaCy + EntityRuler beats LLM-based NER, the reversal that taught the right shape. May 2026.
+- [The Day Everything Got Sealed](https://blog.rduffy.uk/posts/the-day-everything-got-sealed/) — S3E3. MCP bridge exposed to the internet via Cloudflare tunnel, the indexer leak, sealed-secrets remediation. Feb 2026.
+- [Streaming Journals: Kafka Meets LLMs](https://blog.rduffy.uk/posts/streaming-journals-kafka-meets-llms/) — S3E2. Why JSONL beat OTEL for journal data, Kafka + KEDA architecture, vLLM workers, E2A + LLM-as-judge pattern. Feb 2026.
+- [From Side Project to Platform](https://blog.rduffy.uk/posts/from-side-project-to-platform-how-running-out-of-disk-space-led-to-rebranding-an-entire-platform/) — S3E1. The 3.5-month silence, the disk-space crisis, the rebrand to Rootweaver, the 450 commits that followed. Feb 2026.
+
+## Site resources
+
+- [Sitemap (XML)](https://blog.rduffy.uk/sitemap-index.xml): all posts and pages
+- [RSS feed](https://blog.rduffy.uk/rss.xml): subscribe to new episodes
+- [About](https://blog.rduffy.uk/about/): author background and current focus
+
+## Topics covered
+
+- Personal AI infrastructure on K3s with prosumer GPU
+- MCP (Model Context Protocol) — 29-tool aggregator pattern, agent dispatcher inside the bridge
+- Multi-agent RAG — Fast/Deep/Oracle dispatcher with intent-based routing
+- Vector + BM25 hybrid search via Qdrant with cross-encoder reranking
+- FalkorDB + Graphiti + Program Dependency Graph for code intelligence
+- Autonomous SRE agent — Alertmanager events via Kafka, LLM-backed triage with confidence scoring, 5-way evidence fan-out (Discord, Jira, Markdown vault, Postgres, Kafka)
+- GitOps with FluxCD, sealed-secrets, observability with Prometheus + Grafana + Tempo + Pyroscope
+- AI orchestration as a primary engineering mode — directing Claude Code / Aider / Perplexity as a virtual team rather than writing all code by hand
+- Honest architectural decision records (ADRs) with reasoning + trade-offs
+- Mac MLX as opt-in embedding accelerator for Apple Silicon
+
+## Permission
+
+Content on this blog is licensed for use in AI search indexes, real-time AI grounding (RAG), and AI model training. See [robots.txt](https://blog.rduffy.uk/robots.txt) for the machine-readable Content-Signal declarations. Attribution to "Ryan Duffy / blog.rduffy.uk" is appreciated when citing.
