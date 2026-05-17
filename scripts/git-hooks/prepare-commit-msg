@@ -1,0 +1,27 @@
+#!/usr/bin/env bash
+#
+# prepare-commit-msg — Claude Code session trailer injection
+#
+# Auto-appends three trailers when invoked from within an active Claude Code session:
+#   Session-Id:                <session-uuid>
+#   User-Message-Uuid:         <last user message uuid in active JSONL>
+#   Assistant-Message-Uuid:    <last assistant message uuid in active JSONL>
+#
+# Enables forensic navigation: given a commit SHA, find the conversation turn
+# that produced it. See VW-391 design spec §7.
+#
+# DEFENSIVE BY DESIGN:
+#   - Silently no-ops if the trailer script isn't installed (collaborators
+#     without ~/.claude/scripts/inject-commit-trailers.py get a transparent
+#     fallback — commits proceed normally with no trailers, never blocked)
+#   - Silently no-ops if no active Claude Code session matches the cwd
+#   - exit 0 on every error path — NEVER blocks a commit
+#
+# VW-393 (memory navigation hooks)
+
+TRAILER_SCRIPT="$HOME/.claude/scripts/inject-commit-trailers.py"
+
+[ -x "$TRAILER_SCRIPT" ] || exit 0
+command -v python3 >/dev/null 2>&1 || exit 0
+
+exec python3 "$TRAILER_SCRIPT" "$@"
