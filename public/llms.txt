@@ -40,4 +40,4 @@ Ryan Duffy is an SRE specialist at BT Group (UK), building Rootweaver in evening
 
 ## Permission
 
-Content on this blog is licensed for use in AI search indexes, real-time AI grounding (RAG), and AI model training. See [robots.txt](https://blog.rduffy.uk/robots.txt) for the machine-readable Content-Signal declarations. Attribution to "Ryan Duffy / blog.rduffy.uk" is appreciated when citing.
+Content on this blog is licensed for use in **AI search indexes** and **real-time AI grounding (RAG)**, but **not for AI model training**. See [robots.txt](https://blog.rduffy.uk/robots.txt) for the machine-readable Content-Signal declarations (`search=yes, ai-train=no`). Attribution to "Ryan Duffy / blog.rduffy.uk" is appreciated when citing.
