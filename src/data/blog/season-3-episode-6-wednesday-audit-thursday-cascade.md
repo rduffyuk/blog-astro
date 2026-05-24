@@ -15,17 +15,17 @@ reading_time: 25 minutes
 series: 'Season 3: Building in Public (Oct 2025 — May 2026)'
 slug: season-3-episode-6-wednesday-audit-thursday-cascade
 tags:
-- security
-- cve
-- lynis
-- ufw
-- spacy
-- ner
-- yake
-- cloudflare
-- rootweaver
-- building-in-public
-- season-3
+  - security
+  - cve
+  - lynis
+  - ufw
+  - spacy
+  - ner
+  - yake
+  - cloudflare
+  - rootweaver
+  - building-in-public
+  - season-3
 word_count: 5120
 ---
 ## Twenty-six hours, twelve tickets — and the audit that started everything else
