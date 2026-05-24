@@ -9,7 +9,7 @@ categories:
 description: A false-alarm audit on Wednesday patched 37 CVEs, reverted a cluster upgrade in fourteen minutes, then cascaded into ten more tickets on Thursday. Twelve tickets, twenty-six hours, one lesson.
 draft: false
 episode: 6
-featured: false
+featured: true
 pubDatetime: 2026-05-24 12:00:00+00:00
 reading_time: 25 minutes
 series: 'Season 3: Building in Public (Oct 2025 — May 2026)'
