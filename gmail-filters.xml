@@ -1,0 +1,97 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns='http://www.w3.org/2005/Atom' xmlns:apps='http://schemas.google.com/apps/2006'>
+  <title>Mail Filters — ryanduffy.uk@gmail.com</title>
+
+  <!-- 1. GitLab CI/MR notifications -> Dev/CI, skip inbox, mark read -->
+  <entry>
+    <category term='filter'></category>
+    <title>GitLab -> Dev/CI</title>
+    <content></content>
+    <apps:property name='from' value='gitlab@mg.gitlab.com'/>
+    <apps:property name='label' value='Dev/CI'/>
+    <apps:property name='shouldArchive' value='true'/>
+    <apps:property name='shouldMarkAsRead' value='true'/>
+  </entry>
+
+  <!-- 2. GitHub notifications -> Dev/CI, skip inbox, mark read -->
+  <entry>
+    <category term='filter'></category>
+    <title>GitHub -> Dev/CI</title>
+    <content></content>
+    <apps:property name='from' value='notifications@github.com'/>
+    <apps:property name='label' value='Dev/CI'/>
+    <apps:property name='shouldArchive' value='true'/>
+    <apps:property name='shouldMarkAsRead' value='true'/>
+  </entry>
+
+  <!-- 3. Anything Gmail classifies as a promotion -> Promos, skip inbox, mark read -->
+  <entry>
+    <category term='filter'></category>
+    <title>Promotions -> Promos</title>
+    <content></content>
+    <apps:property name='hasTheWord' value='category:promotions'/>
+    <apps:property name='label' value='Promos'/>
+    <apps:property name='shouldArchive' value='true'/>
+    <apps:property name='shouldMarkAsRead' value='true'/>
+  </entry>
+
+  <!-- 4. Banking / payments -> Finance (kept in inbox so you see it) -->
+  <entry>
+    <category term='filter'></category>
+    <title>Banking -> Finance</title>
+    <content></content>
+    <apps:property name='hasTheWord' value='from:(no-reply@monzo.com OR login@monzo.com OR notifications@mail.creditkarma.co.uk OR service@paypal.co.uk OR failed-payments@perplexity.ai OR no-reply@yapily.com)'/>
+    <apps:property name='label' value='Finance'/>
+  </entry>
+
+  <!-- 5. Receipts / invoices -> Receipts, skip inbox, mark read -->
+  <entry>
+    <category term='filter'></category>
+    <title>Receipts</title>
+    <content></content>
+    <apps:property name='hasTheWord' value='from:(invoice+statements@mail.anthropic.com OR googleplay-noreply@google.com) OR subject:(receipt OR invoice)'/>
+    <apps:property name='label' value='Receipts'/>
+    <apps:property name='shouldArchive' value='true'/>
+  </entry>
+
+  <!-- 6. Kubernetes lists & meetings -> Kubernetes, skip inbox -->
+  <entry>
+    <category term='filter'></category>
+    <title>Kubernetes</title>
+    <content></content>
+    <apps:property name='hasTheWord' value='from:kubernetes.io OR to:dev@kubernetes.io OR list:kubernetes-announce@googlegroups.com OR list:kubernetes-sig-architecture@googlegroups.com OR list:kubernetes-sig-storage@googlegroups.com'/>
+    <apps:property name='label' value='Kubernetes'/>
+    <apps:property name='shouldArchive' value='true'/>
+  </entry>
+
+  <!-- 7. Google account security alerts -> Security (kept in inbox - do not auto-archive) -->
+  <entry>
+    <category term='filter'></category>
+    <title>Security alerts</title>
+    <content></content>
+    <apps:property name='from' value='no-reply@accounts.google.com'/>
+    <apps:property name='label' value='Security'/>
+    <apps:property name='shouldNeverSpam' value='true'/>
+  </entry>
+
+  <!-- 8. LinkedIn / social -> SocNet, skip inbox, mark read -->
+  <entry>
+    <category term='filter'></category>
+    <title>LinkedIn -> SocNet</title>
+    <content></content>
+    <apps:property name='from' value='linkedin.com'/>
+    <apps:property name='label' value='SocNet'/>
+    <apps:property name='shouldArchive' value='true'/>
+    <apps:property name='shouldMarkAsRead' value='true'/>
+  </entry>
+
+  <!-- 9. Work (BT) -> Work (kept in inbox) -->
+  <entry>
+    <category term='filter'></category>
+    <title>BT -> Work</title>
+    <content></content>
+    <apps:property name='from' value='bt.com'/>
+    <apps:property name='label' value='Work'/>
+  </entry>
+
+</feed>
