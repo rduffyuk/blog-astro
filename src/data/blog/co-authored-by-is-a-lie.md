@@ -7,7 +7,7 @@ categories:
 - AI Agents
 description: "Every AI coding agent signs its commits with a forgeable plain-text line. I gave each of mine a non-exportable key in the Mac's Secure Enclave, hook-enforced, with a verifier that flags forgery — here's the build."
 draft: false
-featured: true
+featured: false
 pubDatetime: 2026-06-06 06:30:00+00:00
 reading_time: 11 minutes
 series: 'Building in Public'
