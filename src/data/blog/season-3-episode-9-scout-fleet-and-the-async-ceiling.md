@@ -32,7 +32,7 @@ tags:
 ---
 ## The ceiling the last episode walked into
 
-![A small lone figure standing on the floor of a vast dark machine hall, looking up at a glowing ceiling structure high above with light beyond it — the async ceiling the fast paths couldn't touch](/posts/s3e9/final/01-hero-patternCEILING-seed42.png)
+![A small lone figure standing on the floor of a vast dark machine hall, looking up at a glowing ceiling structure high above with light beyond it — the async ceiling the fast paths couldn't touch](/posts/s3e9/final/01-hero-patternCEILING-seed7.png)
 
 Episode 8 ended on a number I didn't like. The async refactor had taken fast search from nine seconds to under 150 milliseconds — a real, satisfying win on the path people actually use. But the same table had a row at the bottom that went the wrong way: cross-domain deep search, **10–15 seconds before, 14–31 seconds after.** A regression, written down on purpose so the next episode would have somewhere to start.
 
