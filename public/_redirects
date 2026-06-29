@@ -1,0 +1,6 @@
+# blog.rduffy.uk is retired — canonical site is rduffy.uk/writing (VW-1085).
+# Slugs are identical across both sites, so /posts/<slug> maps 1:1 to /writing/<slug>.
+# Cloudflare Pages: redirects are always followed even when a static asset matches the path.
+# Order matters — first match wins, so the specific /posts/* rule precedes the catch-all.
+/posts/*    https://rduffy.uk/writing/:splat    301
+/*          https://rduffy.uk/                   301
