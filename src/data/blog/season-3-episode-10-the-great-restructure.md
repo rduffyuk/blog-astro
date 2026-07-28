@@ -9,7 +9,7 @@ categories:
 description: "A month where I tore the platform's repository down to the studs and rebuilt it as a 16-package workspace without ever letting main break — while restoring a CI pipeline that had been silently dead for four days, fighting a month-long embedding-vs-GPU contention battle to a structural fix, and teaching the platform to measure how well it remembers its own past. The season ends the day before the agent era begins."
 draft: false
 episode: 10
-featured: true
+featured: false
 pubDatetime: 2026-06-29 20:00:00+00:00
 reading_time: 19 minutes
 series: 'Season 3: Building in Public (Oct 2025 — May 2026)'
