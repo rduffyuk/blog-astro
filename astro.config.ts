@@ -52,9 +52,31 @@ export default defineConfig({
       wrap: false,
       transformers: [
         transformerFileName({ style: "v2", hideDot: false }),
-        transformerNotationHighlight(),
-        transformerNotationWordHighlight(),
-        transformerNotationDiff({ matchAlgorithm: "v3" }),
+        // Astro 5 and @shikijs/transformers can resolve duplicate Shiki type
+        // packages; the runtime transformer contract is identical.
+        transformerNotationHighlight() as unknown as Parameters<
+          typeof defineConfig
+        >[0] extends { markdown?: { shikiConfig?: { transformers?: infer T } } }
+          ? T extends (infer U)[]
+            ? U
+            : never
+          : never,
+        transformerNotationWordHighlight() as unknown as Parameters<
+          typeof defineConfig
+        >[0] extends { markdown?: { shikiConfig?: { transformers?: infer T } } }
+          ? T extends (infer U)[]
+            ? U
+            : never
+          : never,
+        transformerNotationDiff({
+          matchAlgorithm: "v3",
+        }) as unknown as Parameters<typeof defineConfig>[0] extends {
+          markdown?: { shikiConfig?: { transformers?: infer T } };
+        }
+          ? T extends (infer U)[]
+            ? U
+            : never
+          : never,
       ],
     },
   },
